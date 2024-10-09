@@ -20,12 +20,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'AW-16707600616');
 </script>
 
-
-<!-- Event snippet for 应用跳转 conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-16707600616/hIXwCNLKqtsZEOiB554-'});
-</script>
-
 	
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -284,6 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // 点击like按钮并统计跳转次数
     btn1.addEventListener('click', () => {
+	     gtag('event', 'conversion', {'send_to': 'AW-16707600616/hIXwCNLKqtsZEOiB554-'});
       window.location.href = 'https://c.shorttv.live/cps/sp/20240919b18n5sh5';
       clickCount1++;
       count1.textContent = `+${clickCount1.toLocaleString()}`;
@@ -291,6 +286,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // 点击love按钮并统计跳转次数
     btn2.addEventListener('click', () => {
+	     gtag('event', 'conversion', {'send_to': 'AW-16707600616/hIXwCNLKqtsZEOiB554-'});
       window.location.href = 'https://c.shorttv.live/cps/sp/20240919b18n5sh5';
       clickCount2++;
       count2.textContent = `+${clickCount2.toLocaleString()}`;
@@ -298,6 +294,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // 点击下载按钮并统计跳转次数
     downloadBtn.addEventListener('click', () => {
+	     gtag('event', 'conversion', {'send_to': 'AW-16707600616/hIXwCNLKqtsZEOiB554-'});
       window.location.href = 'https://c.shorttv.live/cps/sp/20240919b18n5sh5';
       downloadClickCount++;
       downloadCount.textContent = `+${downloadClickCount.toLocaleString()}`;
