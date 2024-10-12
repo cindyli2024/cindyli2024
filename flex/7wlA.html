@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PX7QV44V');</script>
+<!-- End Google Tag Manager -->
+
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16707600616"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16707600616');
+</script>
+
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '843952014485198');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=843952014485198&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supermoon86</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 62.5%;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 1.6rem;
+      overflow: hidden;
+      background: black;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* 动态星空背景 */
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite;
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .question {
+      font-size: 4rem;
+      margin: 30vh 0 5rem 0;
+      color: #fff;
+      z-index: 2;
+    }
+
+    .answer {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    .one,
+    .two,
+    .three {
+      border: 1px solid #fff;
+      background-color: #fff;
+      border-radius: 3rem;
+      margin: 2rem;
+      padding: 1.5rem;
+      font-size: 2.4rem;
+      color: #000;
+      cursor: pointer;
+      transition: transform 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .three {
+      position: relative;
+    }
+
+    .one:hover,
+    .two:hover,
+    .three:hover {
+      transform: scale(1.05);
+    }
+
+    /* 手指图标垂直居中 */
+    .finger-icon {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      font-size: 2.4rem;
+      margin-right: 1rem;
+    }
+
+    /* Title样式，可通过行内样式自定义大小 */
+    .download-title {
+      margin-right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      font-size: 2rem;
+      /* Title的可调整字体大小 */
+    }
+
+    /* 使数字部分与like和love一致 */
+    #download-count {
+      /* font-size: 2.4rem; */
+      /* 与like, love保持一致 */
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* 图标样式 */
+    .icon {
+      width: 36px;
+      height: 36px;
+      margin-right: 1rem;
+    }
+
+    /* 评论区样式 */
+    .comment-container {
+      flex-grow: 1;
+      overflow: hidden;
+      position: relative;
+      margin: 2rem 0 6rem 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      height: 40%;
+      z-index: 2;
+    }
+
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      animation: scroll-comments linear infinite;
+    }
+
+    .comment {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+		text-align: left;
+      font-size: 1.8rem;
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
+
+    .comment:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* 控制无缝滚动的关键CSS */
+    @keyframes scroll-comments {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    /* 移动端适配 */
+    @media screen and (max-width: 768px) {
+      .question {
+        font-size: 3rem;
+        margin: 20vh 0 5rem 0;
+      }
+
+      .one,
+      .two,
+      .three {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+
+      .comment {
+      font-size: 1.6rem;
+		padding: 1rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX7QV44V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- 星空背景 -->
+  <div class="stars" id="stars"></div>
+
+  <div class="main">
+    <div class="question">How about the movie?</div>
+    <div class="answer">
+      <div class="one" id="btn1">
+        <img src="./images/like.svg" alt="Icon1" class="icon">
+        <span id="count1">+73,464,024</span>
+      </div>
+      <div class="two" id="btn2">
+        <img src="./images/love.svg" alt="Icon2" class="icon">
+        <span id="count2">+158,792,136</span>
+      </div>
+
+      <!-- 下载按钮 -->
+      <div class="three" id="downloadBtn">
+        <span class="finger-icon">👉</span>
+        <span class="download-title" style="font-size: 2rem;font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;Title</span>
+        <span id="download-count">+32,242,531</span>
+      </div>
+    </div>
+
+    <!-- 评论区 -->
+    <div class="comment-container">
+      <div class="comment-list" id="commentList">
+        <div class="comment" data-url="https://v.qiepian.vip/w2a/?code=8rxLbw7wlA">Beautiful！ <span class="click-count">45,230</span></div>
+        <div class="comment" data-url="https://v.qiepian.vip/w2a/?code=8rxLbw7wlA">So exciting！ <span class="click-count">45,217</span></div>
+        <div class="comment" data-url="https://v.qiepian.vip/w2a/?code=8rxLbw7wlA">Next plz！ <span class="click-count">237,564</span></div>
+        <div class="comment" data-url="https://v.qiepian.vip/w2a/?code=8rxLbw7wlA">No brains, no headaches！ <span class="click-count">337,648</span></div>
+        <div class="comment" data-url="https://v.qiepian.vip/w2a/?code=8rxLbw7wlA">Full movie！ <span class="click-count">7,961,306</span></div>
+        <div class="comment" data-url="https://v.qiepian.vip/w2a/?code=8rxLbw7wlA">I laughed and cried at the same time！ <span class="click-count">35,894</span></div>
+        <div class="comment" data-url="https://v.qiepian.vip/w2a/?code=8rxLbw7wlA">I want to see what happens to this bad guy！ <span class="click-count">68,942</span></div>
+        <div class="comment" data-url="https://v.qiepian.vip/w2a/?code=8rxLbw7wlA">I downloaded it!！ <span class="click-count">688,753</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const count1 = document.getElementById('count1');
+    const count2 = document.getElementById('count2');
+    const downloadCount = document.getElementById('download-count');
+
+    // 初始点击次数
+    let clickCount1 = 73464024; // 初始like数字
+    let clickCount2 = 158792136; // 初始love数字
+    let downloadClickCount = 32242531; // 初始下载数字
+
+    // 点击like按钮并统计跳转次数
+    btn1.addEventListener('click', () => {
+	     gtag('event', 'conversion', {'send_to': 'AW-16707600616/hIXwCNLKqtsZEOiB554-'});
+      window.location.href = 'https://v.qiepian.vip/w2a/?code=8rxLbw7wlA';
+      clickCount1++;
+      count1.textContent = `+${clickCount1.toLocaleString()}`;
+    });
+
+    // 点击love按钮并统计跳转次数
+    btn2.addEventListener('click', () => {
+	     gtag('event', 'conversion', {'send_to': 'AW-16707600616/hIXwCNLKqtsZEOiB554-'});
+      window.location.href = 'https://v.qiepian.vip/w2a/?code=8rxLbw7wlA';
+      clickCount2++;
+      count2.textContent = `+${clickCount2.toLocaleString()}`;
+    });
+
+    // 点击下载按钮并统计跳转次数
+    downloadBtn.addEventListener('click', () => {
+	     gtag('event', 'conversion', {'send_to': 'AW-16707600616/hIXwCNLKqtsZEOiB554-'});
+      window.location.href = 'https://v.qiepian.vip/w2a/?code=8rxLbw7wlA';
+      downloadClickCount++;
+      downloadCount.textContent = `+${downloadClickCount.toLocaleString()}`;
+    });
+
+    // 评论点击跳转并增加点击次数
+    const comments = document.querySelectorAll('.comment');
+    comments.forEach(comment => {
+      comment.addEventListener('click', () => {
+        const url = comment.getAttribute('data-url');
+        window.open(url, '_blank');
+        let countElement = comment.querySelector('.click-count');
+        let count = parseInt(countElement.textContent);
+        count++;
+        countElement.textContent = count;
+      });
+    });
+
+    // 随机生成星星
+    function createStars() {
+      const stars = document.getElementById('stars');
+      const count = 200;
+      for (let i = 0; i < count; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        const delay = Math.random() * 5;
+        const duration = Math.random() * 5 + 5;
+        star.style.left = `${x}%`;
+        star.style.top = `${y}%`;
+        star.style.animationDelay = `${delay}s`;
+        star.style.animationDuration = `${duration}s`;
+        stars.appendChild(star);
+      }
+    }
+
+    createStars();
+
+    // 动态设置滚动速度，保证评论区持续无缝滚动
+    const commentList = document.getElementById('commentList');
+    let totalHeight = 0;
+    const commentsArray = Array.from(commentList.children);
+
+    // 计算所有评论的总高度
+    commentsArray.forEach(comment => {
+      totalHeight += comment.offsetHeight;
+    });
+
+    // 动态调整滚动速度
+    commentList.style.animationDuration = `${totalHeight / 50}s`;
+  </script>
+</body>
+
+</html>
