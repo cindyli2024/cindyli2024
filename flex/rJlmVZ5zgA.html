@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PX7QV44V');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16707600616"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-16707600616');
+  </script>
+
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '843952014485198');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=843952014485198&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>落地页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: white;
+      padding-bottom: 50px;
+      max-width: 750px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .background {
+      width: 100%;
+      max-width: 750px;
+      height: auto;
+      /* 替换为你的背景图片链接 */
+      background-image: url('./images/ssr.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .button {
+      background-color: #fb3867;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 15px 0;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+      width: 90%;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background"></div> <!-- 背景容器 -->
+  <button class="button" onclick="handleClick()">Continue Watching</button>
+  <div class="footer-text">Install FlexTV App to continue watching.</div>
+
+  <script>
+    function handleClick() {
+      gtag('event', 'conversion', { 'send_to': 'AW-16707600616/hIXwCNLKqtsZEOiB554-' });
+      // 复制内容到剪贴板
+      const textToCopy = "flextv://flexvideo.cc/video?series_id=815&series_no=1&visit_id=292025855&link_id=245430"; // 需要复制的内容
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // 复制成功后跳转到链接
+        window.location.href = 'https://flextv.onelink.me/ch/wtLD?pid=web_other&deep_link_value=flextv%3A%2F%2Fflexvideo.cc%2Fvideo%3Fseries_id%3D50%26series_no%3D1%26visit_id%3D289818522%26link_id%3D214378&af_dp=flextv%3A%2F%2Fflexvideo.cc%2Fvideo%3Fseries_id%3D50%26series_no%3D1%26visit_id%3D289818522%26link_id%3D214378&c=214378';
+      }).catch(err => {
+        console.error('复制失败:', err);
+      });
+    }
+  </script>
+</body>
+
+</html>
